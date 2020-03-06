@@ -22,6 +22,7 @@ The number next to “MIB Miner” indicates that your registration is done.
 The number shows your device control number.   
 Our recommendation is that you put the label with the corresponding number on that device.   
    
+   ---
    
    
 ### MIB Miner List   
@@ -48,7 +49,10 @@ You can download the entire list of registered miners. You can check the availab
   B-1) A device with no hash_rate indicates that it has stopped working.   
   B-2) The device has not been registered successfully if it is not on the list.   
   B-3) Hash_rate will be reset by the API if the device is not responding for 5 or more minutes.   
-  
+   
+   
+---   
+
   
 ### Miner Start & Stop   
 

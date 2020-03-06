@@ -1,13 +1,8 @@
-# MIB-API   
-   
-   
-   
-
-## MIB Controller Guide   
+# MIB Controller Guide   
 
 
 
-#### MIB Controller App Install   
+### MIB Controller App Install   
 
 1) Download and install the MIB Controller APK to the device where the MIB Miner APK is already installed.   
 
@@ -29,7 +24,7 @@ Our recommendation is that you put the label with the corresponding number on th
    
    
    
-#### MIB Miner List   
+### MIB Miner List   
 
 You can download the entire list of registered miners. You can check the availability, the current hash, and the connected pool of each miner device.   
 
@@ -55,7 +50,7 @@ You can download the entire list of registered miners. You can check the availab
   B-3) Hash_rate will be reset by the API if the device is not responding for 5 or more minutes.   
   
   
-#### Miner Start & Stop   
+### Miner Start & Stop   
 
 You can request a particular device to start or stop its mining.   
 

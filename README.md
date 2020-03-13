@@ -58,9 +58,8 @@ You can download the entire list of registered miners. You can check the availab
 
 You can request a particular device to start or stop its mining.   
 
-*http:// mib-api.mibcoin.io/miner_action.php?idx=**[idx]**&id=**[id]**&work_name=**[worker name]**&action=**[action]**&pincode=**[pin code]***   
+*http:// mib-api.mibcoin.io/miner_action.php?idx=**id=**[id]**&work_name=**[worker name]**&action=**[action]**&pincode=**[pin code]***   
 
-* **[idx]** : Device number,   
 * **[id]** : Registered Miner ID,   
 * **[miner id]** : Mining ID given for the device   
 * **[worker name]** : Worker name given for the device   

@@ -30,10 +30,17 @@ Our recommendation is that you put the label with the corresponding number on th
 You can download the entire list of registered miners. You can check the availability, the current hash, and the connected pool of each miner device.   
 
 ##### A) Request device status   
-*https://mib-api.mibcoin.io/miner_list.php?id=**[Miner ID]**&ip=**[Miner IP]***   
+*https://mib-api.mibcoin.io/miner_list.php?id=**[Miner ID]**&ip=**[Miner IP]**&type=**[ ]** or **[live_list]** or **[stop_list]**   
 * **Miner ID** : The ID used in the MIB Controller.   
 * **Miner IP** : Shows the IP of the miner.   
-* **Limit and offset** : Add the following parameter with a specified number which you want for the output result. It will return the whole list if Limit and Offset are not specified. ```&offset=1&limit=50```**   
+* **Limit and offset** : Add the following parameter with a specified number which you want for the output result. It will return the whole list if Limit and Offset are not specified. ```&offset=1&limit=50```   
+* **Type** :   
+  Loads miners that are separated by its status (working / not working).   
+  * Miners that has not updated for 5 minutes or more are considered ‘not working’   
+  * Returns a list of devices that has updated in 5 minutes by &type=live_list : lastupdate.   
+  * Returns a list of devicees that has not updated for more than 5 minutes by &type=stop_list : lastupdate.   
+  * Returns a list of total if &type= or the parameter is not provided.   
+
 
 ##### B) Result   
 ```{idx=49,id="test_miner_id",work_name="test_Worker48",hash_rate="75.85",pool_name="K01-MIB",lastupdate="2020-02-18 13:42:07"}```
@@ -58,7 +65,7 @@ You can download the entire list of registered miners. You can check the availab
 
 You can request a particular device to start or stop its mining.   
 
-*https://mib-api.mibcoin.io/miner_action.php?id=**[id]**&work_name=**[worker name]**&action=**[action]**&pincode=**[pin code]***   
+https://mib-api.mibcoin.io/miner_action.php?id=**[id]**&work_name=**[worker name]**&action=**[action]**&pincode=**[pin code]***   
 
 * **[id]** : Registered Miner ID,   
 * **[miner id]** : Mining ID given for the device   

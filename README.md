@@ -30,7 +30,7 @@ Our recommendation is that you put the label with the corresponding number on th
 You can download the entire list of registered miners. You can check the availability, the current hash, and the connected pool of each miner device.   
 
 ##### A) Request device status   
-*https://mib-api.mibcoin.io/miner_list.php?id=**[Miner ID]**&ip=**[Miner IP]**&type=**[ ]** or **[live_list]** or **[stop_list]**   
+*https://mib-api.mibcoin.io/miner_list.php?id=[Miner ID]&ip=[Miner IP]&type=[ ] or [live_list] or [stop_list]*   
 * **Miner ID** : The ID used in the MIB Controller.   
 * **Miner IP** : Shows the IP of the miner.   
 * **Limit and offset** : Add the following parameter with a specified number which you want for the output result. It will return the whole list if Limit and Offset are not specified. ```&offset=1&limit=50```   
@@ -65,7 +65,7 @@ You can download the entire list of registered miners. You can check the availab
 
 You can request a particular device to start or stop its mining.   
 
-https://mib-api.mibcoin.io/miner_action.php?id=**[id]**&work_name=**[worker name]**&action=**[action]**&pincode=**[pin code]***   
+*https://mib-api.mibcoin.io/miner_action.php?id=[id]&work_name=[worker name]&action=[action]&pincode=[pin code]*   
 
 * **[id]** : Registered Miner ID,   
 * **[miner id]** : Mining ID given for the device   

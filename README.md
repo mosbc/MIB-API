@@ -78,6 +78,26 @@ You can request a particular device to start or stop its mining.
 Too many request to the API might lead to additional cost.   
 Limited to three per second.   
 
+   
+   
+   
+
+# Instruction for Controller Monitoring Application   
+
+The MIB Miner Controller Monitoring Application allows you to monitor the status of miners and work on them.
 
 
+#### 1. Download and install MIB_Controller_Monitoring.apk
+
+#### 2. Run the application and follow the steps:
+* Enter your Miner ID
+* Enter the Pincode for the Miner ID
+* Click the add button
+
+#### 3. Monitoring and controlling the status of miners
+*The controlling process usually takes about 1-2 minutes*
+* You can control each added miners by their ID
+* There are 'start mining' and 'exit' commands for all connected miners
+* You can also use the above commands for every single miners
+* Indicates 'count' for each working process
 

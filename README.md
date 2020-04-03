@@ -87,7 +87,7 @@ Limited to three per second.
 The MIB Miner Controller Monitoring Application allows you to monitor the status of miners and work on them.
 
 
-#### 1. Download and install MIB_Controller_Monitoring.apk
+#### 1. Download and install MIB_Monitoring.apk
 
 #### 2. Run the application and follow the steps:
 * Enter your Miner ID

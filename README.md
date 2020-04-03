@@ -81,7 +81,7 @@ Limited to three per second.
    
    
    
-
+   
 # Instruction for Controller Monitoring Application   
 
 The MIB Miner Controller Monitoring Application allows you to monitor the status of miners and work on them.

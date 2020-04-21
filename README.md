@@ -14,7 +14,7 @@ You can download the entire list of registered miners. You can check the availab
 
 
 ##### A) Request device status   
-*https://mib-api.mibcoin.io/global/monitor-api/minerlist?id=[MinerID]&offset=[Offset]&limit=[Limit]&type=[live_list] or [stop_list]*   
+*https://mib-api.mibcoin.io/global/monitor-api/minerlist?id=[MinerID]&offset=[Offset]&limit=[Limit]&type=[live_list]or[stop_list]*   
 * **MinerID** : The mining ID of the miner   
 * **Offset** : The beginning point of the list
 * **Limit** : The number of item to be returned
@@ -47,7 +47,7 @@ You can download the entire list of registered miners. You can check the availab
 
 You can request a particular device to start or stop its mining.   
 
-*https://mib-api.mibcoin.io/global/monitor-api/mineraction?id=[ID]&work_name=[Workername]&action=[start ot stop]&pincode=[Pincode]*   
+*https://mib-api.mibcoin.io/global/monitor-api/mineraction?id=[ID]&work_name=[Workername]&action=[start or stop]&pincode=[Pincode]*   
 
 * **[ID]** : Registered Miner ID   
 * **[Worker name]** : Worker name given for the device   

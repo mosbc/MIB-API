@@ -3,14 +3,14 @@
 You can download the entire list of registered miners. You can check the availability, the current hash, and the connected pool of each miner device.   
 
 ### LIST Request
-##### a.	Check the device list. Considered suspended if there is no value from hash_rate   
-##### b.	If certain miner is requested to stop during Action, the hash_rate immediately becomes empty and the device is automatically stopped   
-##### c.	Miner app automatically starts mining on launch, without needing to click start button   
-##### d.	Miner monitoring app is distributed with Miner app   
-##### e.	Mining app is distributed with monitoring app, and is only available from the device that has installed mining app   
-##### f.	Must confirm the pincode creation stage to create Pincode. Contact support@mibcoin.io if help is needed   
-##### g.	The interval for Communication is one minute at most   
-##### h.	The device is considered stopped(suspended) if no hash_rate is detected for 5 minutes or more.   
+* Check the device list. Considered suspended if there is no value from hash_rate   
+*	If certain miner is requested to stop during Action, the hash_rate immediately becomes empty and the device is automatically stopped   
+*	Miner app automatically starts mining on launch, without needing to click start button   
+*	Miner monitoring app is distributed with Miner app   
+*	Mining app is distributed with monitoring app, and is only available from the device that has installed mining app   
+*	Must confirm the pincode creation stage to create Pincode. Contact support@mibcoin.io if help is needed   
+*	The interval for Communication is one minute at most   
+*	The device is considered stopped(suspended) if no hash_rate is detected for 5 minutes or more.   
 
 
 ##### A) Request device status   

@@ -1,45 +1,27 @@
-# MIB Controller Guide   
-
-
-
-### MIB Controller App Install   
-
-1) Download and install the MIB Controller APK to the device where the MIB Miner APK is already installed.   
-
-<img width="200" src="https://user-images.githubusercontent.com/36949510/76055038-dfff6f00-5fb5-11ea-9d37-ba72667a9ac7.png"></img><br/>
-
-
-2) Enter your mining ID.   
-3) Click ‘Start Miner’ button to start mining.   
-
-It will take about 1 or 2 minutes to successfully register on the monitoring API server.   
-You will see the registration number from Image B once the registration is completed.   
-
-
-<img width="450" src="https://user-images.githubusercontent.com/36949510/76056283-8731d580-5fb9-11ea-8e56-3d7cd0793408.png"></img><br/>
-
-The number next to “MIB Miner” indicates that your registration is done.   
-The number shows your device control number.   
-Our recommendation is that you put the label with the corresponding number on that device.   
-   
-   ---
-   
-   
-### MIB Miner List   
+# MIB Miner List   
 
 You can download the entire list of registered miners. You can check the availability, the current hash, and the connected pool of each miner device.   
 
+### LIST Request
+* a.	Check the device list. Considered suspended if there is no value from hash_rate   
+* b.	If certain miner is requested to stop during Action, the hash_rate immediately becomes empty and the device is automatically stopped   
+* c.	Miner app automatically starts mining on launch, without needing to click start button   
+* d.	Miner monitoring app is distributed with Miner app   
+* e.	Mining app is distributed with monitoring app, and is only available from the device that has installed mining app   
+* f.	Must confirm the pincode creation stage to create Pincode. Contact support@mibcoin.io if help is needed   
+* g.	The interval for Communication is one minute at most   
+* h.	The device is considered stopped(suspended) if no hash_rate is detected for 5 minutes or more.   
+
+
 ##### A) Request device status   
-*https://mib-api.mibcoin.io/miner_list.php? id=[Miner ID]&ip=[Miner IP]&type=[ ] or [live_list] or [stop_list]*   
-* **Miner ID** : The ID used in the MIB Controller.   
-* **Miner IP** : Shows the IP of the miner.   
-* **Limit and offset** : Add the following parameter with a specified number which you want for the output result. It will return the whole list if Limit and Offset are not specified. ```&offset=1&limit=50```   
-* **Type** :   
-  Loads miners that are separated by its status (working / not working).   
-  * Miners that has not updated for 5 minutes or more are considered ‘not working’   
-  * Returns a list of devices that has updated in 5 minutes by &type=live_list : lastupdate.   
-  * Returns a list of devicees that has not updated for more than 5 minutes by &type=stop_list : lastupdate.   
-  * Returns a list of total if &type= or the parameter is not provided.   
+*https://mib-api.mibcoin.io/global/monitor-api/minerlist?id=[MinerID]&offset=[Offset]&limit=[Limit]&type=[live_list] or [stop_list]*   
+* **MinerID** : The mining ID of the miner   
+* **Offset** : The beginning point of the list
+* **Limit** : The number of item to be returned
+* **Type** : live_list or stop_list   
+  * live_list  : Only see the list of devices that are turned on   
+  * stop_list : Only see the list of devices that are stopped   
+
 
 
 ##### B) Result   
@@ -61,25 +43,40 @@ You can download the entire list of registered miners. You can check the availab
 ---   
 
   
-### Miner Start & Stop   
+# Miner Start & Stop   
 
 You can request a particular device to start or stop its mining.   
 
-*https://mib-api.mibcoin.io/miner_action.php? id=[id]&work_name=[worker name]&action=[action]&pincode=[pin code]*   
+*https://mib-api.mibcoin.io/global/monitor-api/mineraction?id=[ID]&work_name=[Workername]&action=[start ot stop]&pincode=[Pincode]*   
 
-* **[id]** : Registered Miner ID,   
-* **[miner id]** : Mining ID given for the device   
-* **[worker name]** : Worker name given for the device   
-* **[action]** : either start or stop   
-* **[pincode]** : pincode is an additional password for your Miner ID registration   
+* **[ID]** : Registered Miner ID   
+* **[Worker name]** : Worker name given for the device   
+* **[Action]** : either start or stop   
+* **[Pincode]** : pincode is an additional password for your Miner ID registration   
 
 *	Result : {msg="success"} : Success   
+
+### PINCODE
+
+##### 1. If connected in Miner->AP->internet order, connect using the mobile phone of the ap owner.   
+##### 2. Open chrome browser and type mib-api.mibcoin.io/pincode_verify   
+##### 3. If the IP is correct IP of the connected miner, enter the ID and PINCODE. You can Start or Stop all the workers with the ID by using the PINCODE.   
+    You need to connect at least one worker to start the process.   
+    Start the worker, and its IP will be registered on the server.   
+    Follow the 1,2,3 steps of pincode and you will be able to register the pincode.   
+
+  * You can create several id=pincode for a single ip. 
+  * The registered id will not be dependent on the ip. 
+  * ip = id matching is confirmed only once at the initial stage. 
+  * Connect and enter to change and the change will be applied immediately.
+
+
 
 Too many request to the API might lead to additional cost.   
 Limited to three per second.   
 
    
-   
+---   
    
    
 # Instruction for Controller Monitoring Application   

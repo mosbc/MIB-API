@@ -1,3 +1,9 @@
+## Notification   
+### General miner don't use this MIB app version.   
+### We recommend General miner use MIB app on MIB website. (www.mibcoin.io)   
+### This MIB app is only App verion for mining farm users.   
+---   
+
 # MIB Miner List   
 
 You can download the entire list of registered miners. You can check the availability, the current hash, and the connected pool of each miner device.   

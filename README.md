@@ -65,7 +65,7 @@ You can request a particular device to start or stop its mining.
 ### PINCODE
 
 ##### 1. If connected in Miner->AP->internet order, connect using the mobile phone of the ap owner.   
-##### 2. Open chrome browser and type https://mib-api.mibcoin.io/pincode_verify   
+##### 2. Open chrome browser and type http://mib-api.mibcoin.io/global/pincode_verify   
 ##### 3. If the IP is correct IP of the connected miner, enter the ID and PINCODE. You can Start or Stop all the workers with the ID by using the PINCODE.   
     You need to connect at least one worker to start the process.   
     Start the worker, and its IP will be registered on the server.   

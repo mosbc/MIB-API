@@ -1,7 +1,7 @@
 ## Notification   
 ### General miner don't use this MIB app version.   
 ### We recommend General miner use MIB app on MIB website. (www.mibcoin.io)   
-### This MIB app is only App verion for mining farm users.   
+### This MIB app is only App version for mining farm users.   
 ---   
 
 # MIB Miner List   
